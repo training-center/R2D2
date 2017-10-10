@@ -34,7 +34,7 @@ const StyledLink = styled(Link)`
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
-  margin-left: 20px;
+  margin: 0 20px;
   text-decoration: none;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
   &:hover {
