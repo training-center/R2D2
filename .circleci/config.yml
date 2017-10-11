@@ -1,0 +1,38 @@
+version: 2
+
+jobs:
+  client:
+    docker:
+      - image: circleci/node:8.4
+    working_directory: ~/repo/client
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - client-dependencies-{{ checksum "package.json" }}
+          - client-dependencies-
+      - run:
+          command: npm install
+      - save_cache:
+          paths:
+            - client/node_modules
+          key: client-dependencies-{{ checksum "package.json" }}
+      - run: npm test
+      - run: npm run lint
+
+server:
+  docker:
+    - image: circleci/node:8.4
+  working_directory: ~/repo/server
+  steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - server-dependencies-{{ checksum "package.json" }}
+        - server-dependencies-
+    - run:
+        command: npm install
+    - save_cache:
+        paths:
+          - server/node_modules
+        key: server-dependencies-{{ checksum "package.json" }}     
