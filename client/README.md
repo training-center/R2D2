@@ -1,7 +1,7 @@
-# Training Center / Client
+# Plataforma Training Center / Client
 
 ## Instalando dependências
-(Recomendamos o uso do [yarn](https://yarnpkg.com) para gerencias as dependências do projeto)
+> Recomendamos o uso do [yarn](https://yarnpkg.com) para gerenciar as dependências do projeto.
 
 `$ yarn`
 
