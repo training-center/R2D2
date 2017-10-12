@@ -4,35 +4,51 @@ jobs:
   client:
     docker:
       - image: circleci/node:8.4
-    working_directory: ~/repo/client
+    working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
           keys:
-          - client-dependencies-{{ checksum "package.json" }}
+          - client-dependencies-{{ checksum "client/package.json" }}
           - client-dependencies-
       - run:
+          working_directory: ~/repo/client
           command: npm install
       - save_cache:
           paths:
-            - client/node_modules
-          key: client-dependencies-{{ checksum "package.json" }}
-      - run: npm test
-      - run: npm run lint
+            - node_modules
+          key: client-dependencies-{{ checksum "client/package.json" }}
+      - run:
+          working_directory: ~/repo/client
+          command: npm run lint
+      - run:
+          working_directory: ~/repo/client
+          command: npm test
 
-server:
-  docker:
-    - image: circleci/node:8.4
-  working_directory: ~/repo/server
-  steps:
-    - checkout
-    - restore_cache:
-        keys:
-        - server-dependencies-{{ checksum "package.json" }}
-        - server-dependencies-
-    - run:
-        command: npm install
-    - save_cache:
-        paths:
-          - server/node_modules
-        key: server-dependencies-{{ checksum "package.json" }}     
+  server:
+    docker:
+      - image: circleci/node:8.4
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - server-dependencies-{{ checksum "server/package.json" }}
+          - server-dependencies-
+      - run:
+          working_directory: ~/repo/server
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: server-dependencies-{{ checksum "server/package.json" }}
+      - run:
+          working_directory: ~/repo/server
+          command: npm test
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - client
+      - server
