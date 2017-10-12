@@ -1,24 +1,26 @@
 {
-  "extends": ["prettier"],
-  "plugins": ["react", "jsx-a11y", "class-property", "prettier"],
-  "parser": "babel-eslint",
+  "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
+  "plugins": ["prettier", "react", "import", "jsx-a11y", "class-property"],
   "parserOptions": {
-    "ecmaVersion": 6,
     "sourceType": "module",
+    "ecmaVersion": 6,
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
+      "experimentalObjectRestSpread": true,
+      "jsx": true
     }
   },
-  "env": {
-    "browser": true,
-    "es6": true
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.common.js"
+      }
+    }
   },
   "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true
-      }
-    ]
+    "import/no-unresolved": "error",
+    "import/order": "error",
+    "max-len": ["warn", 130],
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "no-unused-vars": "error"
   }
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --hot --history-api-fallback --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "lint": "eslint app/**.js",
+    "lint": "eslint **/**.js",
     "test": "jest --coverage --config=jest.config.js"
   },
   "repository": "git+https://github.com/training-center/plataforma.git",
@@ -38,7 +38,9 @@
     "enzyme-adapter-react-16": "^1.0.1",
     "eslint": "^4.8.0",
     "eslint-config-prettier": "^2.6.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
     "eslint-plugin-class-property": "^1.0.6",
+    "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",

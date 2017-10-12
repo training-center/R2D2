@@ -38,13 +38,13 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
   &:hover {
-    color: #0C1624;
+    color: #0c1624;
   }
 `;
 
-const SocialLink = styled(Link)`  
+const SocialLink = styled(Link)`
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
-  color: #0C1624;
+  color: #0c1624;
   font-size: 26px;
   margin-left: 20px;
   &:hover {
@@ -62,12 +62,24 @@ const Header = () => (
       <StyledLink to="/sign-up">Login</StyledLink>
     </nav>
     <nav>
-      <SocialLink to="https://github.com/training-center"><FontAwesome name='github' /></SocialLink>
-      <SocialLink to="https://twitter.com/trainingcentr"><FontAwesome name='twitter' /></SocialLink>
-      <SocialLink to="https://ctgroups.herokuapp.com/"><FontAwesome name='slack' /></SocialLink>
-      <SocialLink to="https://medium.com/trainingcenter"><FontAwesome name='medium' /></SocialLink>
-      <SocialLink to="https://www.youtube.com/c/TrainingCenterChannel"><FontAwesome name='youtube' /></SocialLink>
-      <SocialLink to="https://www.facebook.com/trainingcenterbr/"><FontAwesome name='facebook' /></SocialLink>
+      <SocialLink to="https://github.com/training-center">
+        <FontAwesome name="github" />
+      </SocialLink>
+      <SocialLink to="https://twitter.com/trainingcentr">
+        <FontAwesome name="twitter" />
+      </SocialLink>
+      <SocialLink to="https://ctgroups.herokuapp.com/">
+        <FontAwesome name="slack" />
+      </SocialLink>
+      <SocialLink to="https://medium.com/trainingcenter">
+        <FontAwesome name="medium" />
+      </SocialLink>
+      <SocialLink to="https://www.youtube.com/c/TrainingCenterChannel">
+        <FontAwesome name="youtube" />
+      </SocialLink>
+      <SocialLink to="https://www.facebook.com/trainingcenterbr/">
+        <FontAwesome name="facebook" />
+      </SocialLink>
     </nav>
   </Head>
 );
