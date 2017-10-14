@@ -7,12 +7,15 @@
     "start": "webpack-dev-server --open --hot --history-api-fallback --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint **/**.js",
-    "test": "jest --coverage --config=jest.config.js"
+    "test": "jest --coverage --config=jest.config.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": "git+https://github.com/training-center/plataforma.git",
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "linkstate": "^1.1.0",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -56,6 +59,9 @@
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "@storybook/react": "^3.2.12",
+    "@storybook/addon-actions": "^3.2.12",
+    "@storybook/addon-links": "^3.2.12"
   }
 }
