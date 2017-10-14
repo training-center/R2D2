@@ -7,8 +7,9 @@ const StyledInput = styled.input`
   ${baseStyles};
 `;
 
-const FormInput = ({ name, placeholder, value, onChange, required }) => (
+const FormInput = ({ id, name, placeholder, value, onChange, required }) => (
   <StyledInput
+    id={id || name}
     name={name}
     placeholder={placeholder}
     value={value}
@@ -18,6 +19,7 @@ const FormInput = ({ name, placeholder, value, onChange, required }) => (
 );
 
 FormInput.propTypes = {
+  id: string,
   name: string.isRequired,
   placeholder: string,
   value: string,
@@ -26,7 +28,8 @@ FormInput.propTypes = {
 };
 
 FormInput.defaultProps = {
-  required: false
+  required: false,
+  onChange: () => {}
 };
 
 export default FormInput;
