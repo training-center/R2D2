@@ -11,18 +11,25 @@ const StyledLabel = styled.label`
   font-size: 1.125rem;
   margin-bottom: 0.1875rem;
 `;
+const StyledHelper = styled.div`
+  color: #a7a7a7;
+  font-size: 0.75rem;
+  margin-top: 0.3125rem;
+`;
 
-const Field = ({ label, htmlFor, children }) => (
+const Field = ({ label, htmlFor, children, helper }) => (
   <StyledField>
     {label && <StyledLabel htmlFor={htmlFor}>{label}</StyledLabel>}
     {children}
+    {helper && <StyledHelper>{helper}</StyledHelper>}
   </StyledField>
 );
 
 Field.propTypes = {
   label: string,
   htmlFor: string,
-  children: node
+  children: node,
+  helper: string
 };
 
 export default Field;
