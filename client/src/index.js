@@ -18,6 +18,7 @@ render(App);
 injectGlobal`
   html {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   *, *::before, *::after {
