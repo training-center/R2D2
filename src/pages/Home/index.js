@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from 'client/src/features/Header';
-import Container from 'client/src/components/Container';
+import Header from 'src/features/Header';
+import Container from 'src/components/Container';
 
 const Home = () => (
   <div>

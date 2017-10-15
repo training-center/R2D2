@@ -5,7 +5,8 @@ module.exports = {
   moduleNameMapper: {
     '(.*).(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/config/__mocks__/fileMock.js',
-    '^client[/](.+)': '<rootDir>/$1'
+    '^src[/](.+)': '<rootDir>/src/$1',
+    '^assets[/](.+)': '<rootDir>/assets/$1'
   },
-  setupFiles: ['<rootDir>/config/setup-enzyme.js']
+  setupFiles: ['<rootDir>/config/setupEnzyme.js']
 };

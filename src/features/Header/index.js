@@ -2,7 +2,7 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import logo from 'client/assets/images/logo-tc.png';
+import logo from 'assets/images/logo-tc.png';
 
 const Head = styled.header`
   align-items: center;

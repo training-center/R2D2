@@ -8,7 +8,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      client: path.resolve(__dirname, '../client')
+      src: path.resolve(__dirname, './src'),
+      assets: path.resolve(__dirname, './assets')
     }
   },
   module: {

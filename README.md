@@ -1,9 +1,15 @@
-# Plataforma de Mentoria
+# Plataforma Training Center / Client
 
-> Uma plataforma para gerenciar nossos(as) mentores(as) e mentorados(as) de uma forma mais eficiente do que no nosso repositório no Github.
+## Instalando dependências
+> Recomendamos o uso do [yarn](https://yarnpkg.com) para gerenciar as dependências do projeto.
 
-## Definições
+`$ yarn`
 
-As definições estão sendo feitas nas issues deste repositório, se você quer nos ajudar dá uma olhada lá!
+## Executando o projeto
+`$ yarn start`
 
-Não se esqueça de ver o status atual do projeto através do nosso [board](https://github.com/training-center/plataforma/projects/1).
+## Executando os testes
+`$ yarn test`
+
+### Modo watch
+`$ yarn test --watch`
