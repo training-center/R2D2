@@ -1,7 +1,13 @@
 import { css } from 'styled-components';
 
-export const baseStyles = css`
-  border: 1px solid #e0e0e0;
+export const stateColor = {
+  pristine: '#e0e0e0',
+  valid: '#28a745',
+  invalid: '#dc3545'
+};
+
+export const baseInputStyles = css`
+  border: 1px solid ${props => stateColor[props.state]};
   border-radius: 0.25rem;
   color: #495057;
   display: block;

@@ -1,13 +1,21 @@
 import React from 'react';
 import { bool, func, string } from 'prop-types';
 import styled from 'styled-components';
-import { baseStyles } from '../styles';
+import { baseInputStyles } from '../styles';
 
 const StyledInput = styled.input`
-  ${baseStyles};
+  ${baseInputStyles};
 `;
 
-const FormInput = ({ id, name, placeholder, value, onChange, required }) => (
+const FormInput = ({
+  id,
+  name,
+  placeholder,
+  value,
+  onChange,
+  required,
+  state
+}) => (
   <StyledInput
     id={id || name}
     name={name}
@@ -15,6 +23,7 @@ const FormInput = ({ id, name, placeholder, value, onChange, required }) => (
     value={value}
     onChange={onChange}
     required={required}
+    state={state}
   />
 );
 
@@ -24,12 +33,14 @@ FormInput.propTypes = {
   placeholder: string,
   value: string,
   onChange: func.isRequired,
-  required: bool
+  required: bool,
+  state: string
 };
 
 FormInput.defaultProps = {
   required: false,
-  onChange: () => {}
+  onChange: () => {},
+  state: 'pristine'
 };
 
 export default FormInput;

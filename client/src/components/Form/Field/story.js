@@ -9,8 +9,28 @@ storiesOf('Field')
       <FormInput name="input" />
     </Field>
   ))
-  .add('with helper', () => (
+  .add('helper', () => (
     <Field label="Label" helper="additional message" htmlFor="input">
       <FormInput name="input" />
+    </Field>
+  ))
+  .add('invalid', () => (
+    <Field
+      label="Label"
+      helper="additional message"
+      state="invalid"
+      htmlFor="input"
+    >
+      <FormInput state="invalid" name="input" />
+    </Field>
+  ))
+  .add('valid', () => (
+    <Field
+      label="Label"
+      helper="additional message"
+      state="valid"
+      htmlFor="input"
+    >
+      <FormInput state="valid" name="input" />
     </Field>
   ));

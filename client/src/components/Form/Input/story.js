@@ -8,4 +8,7 @@ const props = {
   onChange: action('on-change')
 };
 
-storiesOf('Input').add('default', () => <FormInput {...props} />);
+storiesOf('Input')
+  .add('default', () => <FormInput {...props} />)
+  .add('invalid', () => <FormInput {...props} state="invalid" />)
+  .add('valid', () => <FormInput {...props} state="valid" />);
