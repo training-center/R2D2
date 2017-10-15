@@ -7,6 +7,7 @@ export const stateColor = {
 };
 
 export const baseInputStyles = css`
+  background-color: white;
   border: 1px solid ${props => stateColor[props.state]};
   border-radius: 0.25rem;
   color: #495057;

@@ -37,11 +37,11 @@ Field.propTypes = {
   htmlFor: string,
   children: node,
   helper: string,
-  state: string,
+  state: string
 };
 
 Field.defaultProps = {
-  state: 'pristine',
+  state: 'pristine'
 };
 
 export default Field;

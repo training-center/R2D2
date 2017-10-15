@@ -8,14 +8,14 @@ function loadStories() {
 }
 
 injectGlobal`
-html {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
 `
 
 
