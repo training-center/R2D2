@@ -47,7 +47,8 @@ A lista de mentorados(as) consiste em um documento em formato markdown que é ed
 Os requisitos básicos da plataforma de mentoria, identificados previamente por pessoas envolvidas na iniciativa, são:
 
 * painel administrativo
-* cadastro de perfis como mentores(as)
+* cadastro de perfis como mentores(as) Obs: O mentor será pré cadastrado, mas precisaram de uma liberação dos outros mentores ou admins para estar disponível como mentor.
+* Os admins serão incluídos diretamente no Banco de Dados e vão fazer tudo que um mentor faz, além de poder retirar pessoas do projeto.
 * cadastro de perfis como mentorados(as)
 * cadastro como pessoa que busca mentoria
 * assinatura do termo de aceito o código de conduta
