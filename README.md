@@ -12,4 +12,4 @@
 `$ yarn test`
 
 ### Modo watch
-`$ yarn test --watch`
+`$ yarn test -- --watch`

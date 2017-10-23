@@ -8,5 +8,5 @@ module.exports = {
     '^src[/](.+)': '<rootDir>/src/$1',
     '^assets[/](.+)': '<rootDir>/assets/$1'
   },
-  setupFiles: ['<rootDir>/config/setupEnzyme.js']
+  setupFiles: ['raf/polyfill', '<rootDir>/config/setupEnzyme.js']
 };
