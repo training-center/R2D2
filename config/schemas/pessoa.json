@@ -1,0 +1,73 @@
+{
+  "properties": {
+    "id": {
+      "description": "Codigo identificador do usuário",
+      "id": "/properties/id",
+      "type": "integer"
+    },
+    "name": {
+      "description": "O nome principal do usuário",
+      "id": "/properties/name",
+      "type": "string"
+    },
+    "email": {
+      "description": "O email principal do usuário",
+      "id": "/properties/email",
+      "type": "string"
+    },
+    "level": {
+      "id": "/properties/level",
+      "properties": {
+        "id": {
+          "description": "O level atual do usuário",
+          "id": "/properties/level/properties/id",
+          "type": "integer"
+        },
+        "name": {
+          "description": "A descrição do level",
+          "id": "/properties/level/properties/name",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "status": {
+      "default": "ATIVO",
+      "description": "O status atual do usuário",
+      "id": "/properties/status",
+      "type": "string"
+    },
+    "contacts": {
+      "id": "/properties/contacts",
+      "items": {
+        "id": "/properties/contacts/items",
+        "properties": {
+          "description": {
+            "description": "O contato do usuario",
+            "examples": [
+              "www.linkedin.com/in/fulano"
+            ],
+            "id": "/properties/contacts/items/properties/description",
+            "type": "string"
+          },
+          "name": {
+            "description": "O Label do contato.",
+            "examples": [
+              "LinkedIn",
+              "GitHub",
+              "FaceBook",
+              "Twitter",
+              "Site",
+              "Youtube"
+            ],
+            "id": "/properties/contacts/items/properties/name",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

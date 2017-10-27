@@ -1,0 +1,13 @@
+{
+  "properties": {
+    "descricao": {
+      "id": "/properties/descricao",
+      "type": "string"
+   },
+   "id": {
+     "id": "/properties/id",
+     "type": "integer"
+   }
+ },
+ "type": "object"
+}

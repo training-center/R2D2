@@ -1,0 +1,43 @@
+{
+  "properties": {
+    "data_solicitacao": {
+      "id": "/properties/data_solicitacao",
+      "format": "date-time",
+      "type": "string"
+    },
+    "level": {
+      "$ref": "/properties/level",
+      "type": "object"
+    },
+    "materias": {
+      "items": {
+        "properties": {
+          "$ref": "/properties/materia",
+          "type": "object"
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "mentoria": {
+      "properties": {
+        "$ref": "/properties/mentoria",
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "solicitante": {
+      "properties": {
+        "$ref": "/properties/pessoa",
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "ultima_atualizacao": {
+      "id": "/properties/ultima_atualizacao",
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

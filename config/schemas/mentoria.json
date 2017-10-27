@@ -1,0 +1,18 @@
+{
+  "mentor": {
+    "$ref": "#/pessoa",
+    "type": "object"
+  },
+  "mentorado": {
+    "$ref": "#/pessoa",
+    "type": "object"
+  },
+  "inicio": "TIMESTAMP",
+  "conclusao": "TIMESTAMP",
+  "materias": [
+    {
+      "$ref": "#/pessoa",
+      "type": "object"
+    }
+  ]
+}
