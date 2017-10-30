@@ -3,7 +3,8 @@
     "id": {
       "description": "Codigo identificador do usuário",
       "id": "/properties/id",
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "name": {
       "description": "O nome principal do usuário",
@@ -21,7 +22,8 @@
         "id": {
           "description": "O level atual do usuário",
           "id": "/properties/level/properties/id",
-          "type": "integer"
+          "type": "integer",
+          "minimum": 1
         },
         "name": {
           "description": "A descrição do level",
@@ -29,6 +31,8 @@
           "type": "string"
         }
       },
+      "required": ["id", "name"],
+      
       "type": "object"
     },
     "status": {
@@ -64,10 +68,12 @@
             "type": "string"
           }
         },
+        "required": ["name", "description"],
         "type": "object"
       },
       "type": "array"
     }
   },
-  "type": "object"
+  "type": "object",
+  "required": ["id", "name", "email", "status", "level"]
 }
